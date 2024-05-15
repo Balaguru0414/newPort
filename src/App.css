@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    @apply bg-violet-50
+}
+
+/* bg-gradient-to-b from-[#fff0] to-[#000000f3] to-70%  */
+  
+@layer components{ 
+    .skillImg{
+        @apply lg:w-24 lg:h-24 w-16 h-16 p-2 bg-black bg-opacity-25 
+        rounded-md  cursor-pointer 
+        hover:bg-opacity-40 hover:-translate-y-5 transition-all duration-300 ;
+    }
+    
+    .mobileLink {
+        @apply w-full h-full text-center;
+    }
+
+    .project-desc {
+        @apply absolute left-0 right-0 bottom-0 top-0 
+        bg-[#000000c9]
+        opacity-0 duration-500 hover:opacity-100 flex flex-col justify-center 
+        gap-5 items-center;
+    }
+
+    .plink {
+        @apply tooltip tooltip-bottom tooltip-accent p-2 rounded bg-primary flex items-center justify-center; 
+    }
+}
+  
+
