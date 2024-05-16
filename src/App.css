@@ -21,7 +21,7 @@ body{
     }
     
     .mobileLink {
-        @apply w-full h-full text-center;
+        @apply text-center bg-black border-b-2 bg-opacity-5 py-1;
     }
 
     .project-desc {

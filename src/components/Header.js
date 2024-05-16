@@ -39,31 +39,31 @@ export default function Header() {
         </ul>
       </nav>
       {toggleMenu && (
-        <nav className="block md:hidden ">
+        <nav className="block md:hidden rounded">
           <ul
             onClick={() => setToggleMenu(!toggleMenu)}
-            className="flex flex-col text-secondary fixed top-16 left-0 z-50
-            bg-white w-full py-2 shadow-md
-             space-y-3"
+            className={`flex flex-col justify-center text-secondary fixed top-16 
+            right-0 z-50 bg-white w-1/2  shadow-md space-y-2 rounded
+            animate-mob-nav`}
           >
-            <li className="mobileLink">
-              <a href="#">Home</a>
-            </li>
-            <li className="mobileLink">
-              <a href="#about">About</a>
-            </li>
-            <li className="mobileLink">
-              <a href="#project">Projects</a>
-            </li>
-            <li className="mobileLink">
-              <a href="/#skills">Skills</a>
-            </li>
-            <li className="mobileLink">
-              <a href="/#experience">Experience</a>
-            </li>
-            <li className="mobileLink">
-              <a href="#contact">Contact</a>
-            </li>
+            <a href="#" className="mobileLink">
+              Home
+            </a>
+            <a href="#about" className="mobileLink">
+              About
+            </a>
+            <a href="#project" className="mobileLink">
+              Projects
+            </a>
+            <a href="/#skills" className="mobileLink">
+              Skills
+            </a>
+            <a href="/#experience" className="mobileLink">
+              Experience
+            </a>
+            <a href="#contact" className="mobileLink">
+              Contact
+            </a>
           </ul>
         </nav>
       )}
