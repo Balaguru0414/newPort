@@ -24,13 +24,18 @@ const Skills = () => {
   const { isSkillInView } = useObserver();
 
   return (
-    <section id="skills" className="w-full py-20 lg:px-20 px-5 bg-secondary">
-      <h1
-        className="text-4xl border-b-4 border-primary mb-10 w-40 font-bold
+    <section
+      id="skills"
+      className="flex flex-col items-center w-full py-20 lg:px-20 px-5 bg-secondary"
+    >
+      <div className="px-10">
+        <h1
+          className="text-4xl border-b-4 border-primary mb-10 w-24 font-bold
       text-white"
-      >
-        Skills
-      </h1>
+        >
+          Skills
+        </h1>
+      </div>
       <div
         className="lg:p-8 p-5 bg-opacity-90 w-full h-1/2 flex
       items-end justify-center flex-wrap lg:gap-5 gap-3"

@@ -19,22 +19,34 @@ export default function Header() {
       <nav className="hidden md:block">
         <ul className="flex space-x-6">
           <li>
-            <a href="#">Home</a>
+            <a href="#" className="lapLink">
+              Home
+            </a>
           </li>
           <li>
-            <a href="/#about">About</a>
+            <a href="/#about" className="lapLink">
+              About
+            </a>
           </li>
           <li>
-            <a href="/#project">Projects</a>
+            <a href="/#project" className="lapLink">
+              Projects
+            </a>
           </li>
           <li>
-            <a href="/#skills">Skills</a>
+            <a href="/#skills" className="lapLink">
+              Skills
+            </a>
           </li>
           <li>
-            <a href="/#experience">Experience</a>
+            <a href="/#experience" className="lapLink">
+              Experience
+            </a>
           </li>
           <li>
-            <a href="/#contact">Contact</a>
+            <a href="/#contact" className="lapLink">
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
@@ -43,7 +55,7 @@ export default function Header() {
           <ul
             onClick={() => setToggleMenu(!toggleMenu)}
             className={`flex flex-col justify-center text-secondary fixed top-16 
-            right-0 z-50 bg-white w-1/2  shadow-md space-y-2 rounded
+            right-3 z-50 bg-white w-1/2  shadow-md  rounded
             animate-mob-nav`}
           >
             <a href="#" className="mobileLink">
