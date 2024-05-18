@@ -1,15 +1,38 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  useEffect(() => {
+    document.querySelector(".navLinks").addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // matching strategy
+      if (e.target.classList.contains("lapLink")) {
+        const id = e.target.getAttribute("href");
+        document.querySelector(id).scrollIntoView();
+      }
+      if (e.target.classList.contains("mobileLink")) {
+        const id = e.target.getAttribute("href");
+        document.querySelector(id).scrollIntoView();
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    const header = document.querySelector("header");
+    const btnUp = document.querySelector(".btnUp");
+    btnUp.addEventListener("click", function (e) {
+      header.scrollIntoView({ behavior: "smooth" });
+    });
+  }, []);
 
   return (
     <header
       className="flex items-center justify-between px-10 py-3 bg-violet-950 
       sticky top-0 shadow-lg z-50 text-white"
     >
-      <a className="font-bold text-xl flex items-center gap-3" href="#">
+      <a className="font-bold text-xl flex items-center gap-3 btnUp">
         <img
           src="https://avatars.githubusercontent.com/u/117264451?v=4"
           className="w-8 h-8 rounded-full"
@@ -17,34 +40,29 @@ export default function Header() {
         L Bala Guru
       </a>
       <nav className="hidden md:block">
-        <ul className="flex space-x-6">
+        <ul className="flex space-x-6 navLinks">
           <li>
-            <a href="#" className="lapLink">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/#about" className="lapLink">
+            <a href="#about" className="lapLink">
               About
             </a>
           </li>
           <li>
-            <a href="/#project" className="lapLink">
+            <a href="#project" className="lapLink">
               Projects
             </a>
           </li>
           <li>
-            <a href="/#skills" className="lapLink">
+            <a href="#skills" className="lapLink">
               Skills
             </a>
           </li>
           <li>
-            <a href="/#experience" className="lapLink">
+            <a href="#experience" className="lapLink">
               Experience
             </a>
           </li>
           <li>
-            <a href="/#contact" className="lapLink">
+            <a href="#contact" className="lapLink">
               Contact
             </a>
           </li>
@@ -55,22 +73,19 @@ export default function Header() {
           <ul
             onClick={() => setToggleMenu(!toggleMenu)}
             className={`flex flex-col justify-center text-secondary fixed top-16 
-            right-3 z-50 bg-white w-1/2  shadow-md  rounded
+            right-5 z-50 bg-white w-1/2  shadow-md  rounded navLinks
             animate-mob-nav`}
           >
-            <a href="#" className="mobileLink">
-              Home
-            </a>
             <a href="#about" className="mobileLink">
               About
             </a>
             <a href="#project" className="mobileLink">
               Projects
             </a>
-            <a href="/#skills" className="mobileLink">
+            <a href="#skills" className="mobileLink">
               Skills
             </a>
-            <a href="/#experience" className="mobileLink">
+            <a href="#experience" className="mobileLink">
               Experience
             </a>
             <a href="#contact" className="mobileLink">

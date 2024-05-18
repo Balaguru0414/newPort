@@ -5,7 +5,7 @@ const Terminal = () => {
 
   return (
     <div
-      className={`bg-gray-900 text-white text-xl p-4 px-10 
+      className={`bg-gray-900 text-white text-xl p-4 md:px-10 
     rounded-lg shadow-lg ${
       isContactInView ? "animate-bottom opacity-100" : "opacity-0"
     }`}

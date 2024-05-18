@@ -46,7 +46,7 @@ function Projects() {
   return (
     <section
       id="project"
-      className=" flex flex-col py-20 px-5 justify-center bg-primary text-white"
+      className="overflow-hidden flex flex-col py-20 px-5 justify-center bg-primary text-white"
     >
       <div className="w-full">
         <div className="flex flex-col items-center px-10 py-5">

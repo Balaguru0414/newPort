@@ -2,31 +2,6 @@ import AboutImg from "../assets/about.png";
 import { useObserver } from "./Observer";
 
 export default function About() {
-  // const [isSectionInView, setIsSectionInView] = useState(false);
-
-  // useEffect(() => {
-  //   const options = {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0.5,
-  //   };
-
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  // if (entry.isIntersecting) {
-  //   setIsSectionInView(true);
-  //   observer.disconnect();
-  // }
-  //     });
-  //   }, options);
-
-  //   observer.observe(document.getElementById("about"));
-
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, []);
-
   const { isAboutInView } = useObserver();
 
   const config = {
@@ -40,7 +15,7 @@ export default function About() {
 
   return (
     <section
-      className="flex justify-around flex-wrap bg-secondary px-5 lg:py-32 py-20"
+      className="overflow-hidden flex justify-around flex-wrap bg-secondary px-5 lg:py-32 py-20"
       id="about"
     >
       <div className="py-5">

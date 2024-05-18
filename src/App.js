@@ -2,7 +2,6 @@ import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-import Flip from "./components/Flip";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -11,7 +10,7 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="font-poppins">
+    <div>
       <Header />
       <Hero />
       <About />

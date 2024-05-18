@@ -4,11 +4,10 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body{
-    @apply bg-violet-50
+    @apply bg-violet-50 overflow-x-hidden font-poppins
 }
 
 /* bg-gradient-to-b from-[#fff0] to-[#000000f3] to-70%  */

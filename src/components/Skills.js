@@ -26,7 +26,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center w-full py-20 lg:px-20 px-5 bg-secondary"
+      className="overflow-hidden flex flex-col items-center w-full py-20 lg:px-20 px-5 bg-secondary"
     >
       <div className="px-10">
         <h1

@@ -21,7 +21,7 @@ export default function Hero() {
      bg-primary justify-around"
     >
       <div className="flex flex-col items-center animate-left">
-        <h1 className=" text-white lg:text-6xl text-5xl text-center font-hero-font">
+        <h1 className=" text-white lg:text-6xl text-4xl text-center font-hero-font">
           <span className="block text-[#A3FFD6]">Hi,</span>I'm{" "}
           <span className="text-black">L</span> .Balaguru
           <p className="text-2xl mt-3">{config.subtitle}</p>

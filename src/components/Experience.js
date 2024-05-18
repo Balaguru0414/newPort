@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full py-20 lg:px-20 px-10 bg-primary flex
+      className="overflow-hidden w-full py-20 lg:px-20 px-10 bg-primary flex
     flex-col items-center"
     >
       <div className="px-10">
