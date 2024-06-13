@@ -1,8 +1,34 @@
+import { FaArrowUp } from "react-icons/fa";
 import AboutImg from "../assets/about.png";
 import { useObserver } from "./Observer";
+import { useEffect, useState } from "react";
 
 export default function About() {
   const { isAboutInView } = useObserver();
+  const [scrollY, setScrollY] = useState(0);
+  const [upArrowShow, setUpArrowShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollY > 250) {
+      setUpArrowShow(true);
+    } else {
+      setUpArrowShow(false);
+    }
+  }, [scrollY]);
+
+  function up() {}
 
   const config = {
     line1:
@@ -42,6 +68,16 @@ export default function About() {
           <p className="pb-5 text-justify">{config.line3}</p>
         </div>
       </div>
+      {upArrowShow && (
+        <div
+          onClick={up}
+          className="w-10 h-10 rounded-full flex items-center justify-center
+      border-[4px] border-violet-400 fixed right-5 bottom-5 bg-white
+      text-black hover:text-white hover:bg-black duration-300"
+        >
+          <FaArrowUp />
+        </div>
+      )}
     </section>
   );
 }

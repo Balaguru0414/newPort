@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <section
-      className="flex items-center flex-wrap-reverse gap-10 px-5 py-20 lg:py-20
+      className="overflow-hidden flex items-center flex-wrap-reverse gap-10 px-5 py-20 lg:py-20
      bg-primary justify-around"
     >
       <div className="flex flex-col items-center animate-left">

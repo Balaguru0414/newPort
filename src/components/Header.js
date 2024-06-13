@@ -4,19 +4,20 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
   useEffect(() => {
-    document.querySelector(".navLinks").addEventListener("click", function (e) {
-      e.preventDefault();
+    {
+      document
+        .querySelector(".navLinks")
+        ?.addEventListener("click", function (e) {
+          e.preventDefault();
+          console.log("lapLink *******", e.target);
 
-      // matching strategy
-      if (e.target.classList.contains("lapLink")) {
-        const id = e.target.getAttribute("href");
-        document.querySelector(id).scrollIntoView();
-      }
-      if (e.target.classList.contains("mobileLink")) {
-        const id = e.target.getAttribute("href");
-        document.querySelector(id).scrollIntoView();
-      }
-    });
+          // matching strategy
+          if (e.target.classList.contains("lapLink")) {
+            const id = e.target.getAttribute("href");
+            document.querySelector(id).scrollIntoView();
+          }
+        });
+    }
   }, []);
 
   useEffect(() => {
@@ -71,9 +72,9 @@ export default function Header() {
       {toggleMenu && (
         <nav className="block md:hidden rounded">
           <ul
-            onClick={() => setToggleMenu(!toggleMenu)}
+            // onClick={() => setToggleMenu(!toggleMenu)}
             className={`flex flex-col justify-center text-secondary fixed top-16 
-            right-5 z-50 bg-white w-1/2  shadow-md  rounded navLinks
+            right-5 z-50 bg-white w-1/2  shadow-md  rounded mobilenavLinks
             animate-mob-nav`}
           >
             <a href="#about" className="mobileLink">

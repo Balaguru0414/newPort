@@ -26,8 +26,8 @@ const Terminal = () => {
           $ cat <span className="text-gray-400 ">email.txt</span>
         </p>
         <p className="text-white">
-          <span className="text-gray-400">&gt;</span> Email :
-          balag0414@gmail.com
+          <span className="text-gray-400">&gt;</span> Email :{" "}
+          <a href="mailto:balag0414@gmail.com">balag0414@gmail.com</a>
         </p>
       </div>
       <div className="mb-2 space-y-2">
@@ -35,7 +35,8 @@ const Terminal = () => {
           $ cat <span className="text-gray-400 ">phone.txt</span>
         </p>
         <p className=" text-white">
-          <span className="text-gray-400">&gt;</span> Phone : +91 9360172760
+          <span className="text-gray-400">&gt;</span> Phone :{" "}
+          <a href="tel:+919360172760">+91 9360172760</a>
         </p>
       </div>
     </div>
